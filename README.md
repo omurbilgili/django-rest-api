@@ -8,7 +8,7 @@ Used Packages:
 
 Used Commands:
 
-django-admin startproject djangoRestAPI 
-python3 manage.py startapp api
+- django-admin startproject djangoRestAPI 
+- python3 manage.py startapp api
 
 
