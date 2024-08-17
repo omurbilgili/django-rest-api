@@ -1,0 +1,3 @@
+from api.serializers.categorySerializer import CategorySerializer
+from api.serializers.productSerializer import ProductSerializer
+from api.serializers.numberSerializer import NumbersSerializer
