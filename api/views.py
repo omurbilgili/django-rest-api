@@ -1,7 +1,8 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import NumbersSerializer
+from .serializers import NumbersSerializer,ProductSerializer
+from .services import get_static_data
 
 class AddNumbersView(APIView):
     def post(self, request, *args, **kwargs):
@@ -29,3 +30,9 @@ class SampleDataView(APIView):
             "data": [0,1,2,3,4,5,6,7,8,9]
         }
         return Response(data, status=status.HTTP_200_OK)
+    
+class ProductView(APIView):
+    def get(self, request, *args, **kwargs):
+        product = get_static_data()
+        serializer = ProductSerializer(product)
+        return Response(serializer.data)
