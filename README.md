@@ -1,5 +1,5 @@
 # django-rest-api
-Django Rest API
+Django Rest API without DB
 
 Used Packages:
 
